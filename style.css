@@ -1,0 +1,133 @@
+:root {
+  --color-brand--1: #ffb545;
+  --color-brand--2: #00c46a;
+
+  --color-dark--1: #2d3439;
+  --color-dark--2: #42484d;
+  --color-light--1: #aaa;
+  --color-light--2: #ececec;
+  --color-light--3: rgb(214, 222, 224);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: var(--color-light--2);
+  font-weight: 400;
+  line-height: 1.6;
+  height: 100vh;
+  overscroll-behavior-y: none;
+  background-color: #ffff;
+  padding: 2.5rem;
+  display: flex;
+}
+a:link,
+a:visited {
+  color: var(--color-brand--1);
+}
+
+/* Sidebar */
+
+.siderbar {
+  flex-basis: 50rem;
+  background-color: var(--color-dark--1);
+  padding: 3rem 5rem 4rem 5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  justify-content: space-between;
+}
+
+.header {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, cursive;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 1.5rem;
+}
+
+.logo {
+  width: 5.2rem;
+  align-self: center;
+}
+
+.form {
+  background-color: var(--color-dark--2);
+  border-radius: 0.5rem;
+  padding: 1.5rem 2.75rem;
+  margin-bottom: 1.75rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 2.5rem;
+  /* Match height and activity boxes */
+  height: 9.25rem;
+  transition: all 0.5s transform 1ms;
+}
+.form.hidden {
+  opacity: 0;
+  height: 0;
+  padding: 0 2.25rem;
+  margin-bottom: 0;
+  transform: translateY(-30rem);
+}
+.form__row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.form__row--hidden {
+  display: none;
+}
+.form__label {
+  flex: 0 0 50%;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.form__input {
+  width: 100%;
+  padding: 0.3rem 1.1rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--color-light--3);
+  transition: all 0.2s;
+}
+.form__input:focus {
+  outline: none;
+  background-color: #fff;
+}
+.form__btn {
+  display: none;
+  padding: 0.5rem 0.8rem;
+  margin: 0 auto;
+}
+.copyright {
+  margin-top: auto;
+  color: var(--color-light--1);
+  text-align: center;
+  font-size: 1.3rem;
+}
+.twitter-link:hover,
+.twitter-link:active {
+  color: var(--color-light--2);
+}
+
+/* Map */
+
+#map {
+  display: inline-block;
+  background-color: var(--color-light--1);
+  flex: 1;
+  height: 100%;
+}

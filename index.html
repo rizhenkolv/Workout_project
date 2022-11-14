@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+      integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+      crossorigin=""
+    ></script>
+    <script refer src="./script.js"></script>
+    <title>Map your workout</title>
+  </head>
+  <body>
+    <div class="siderbar">
+      <div class="header">
+        <img src="logo2.png" alt="logo" class="logo" />
+        <p>Run with me</p>
+      </div>
+      <form class="form hidden">
+        <div class="form__row">
+          <label for="" class="form__label">Type</label>
+          <select class="form__input form__input--type">
+            <option value="running">Running</option>
+            <option value="running">Cycling</option>
+          </select>
+        </div>
+        <div class="form__row">
+          <label for="" class="form__label">Distance</label>
+          <input
+            class="form__input form__input--distance"
+            type="text"
+            placeholder="km"
+          />
+        </div>
+        <div class="form__row">
+          <label for="" class="form__label">Duration</label>
+          <input
+            class="form__input form__input--duration"
+            type="text"
+            placeholder="min"
+          />
+        </div>
+        <div class="form__row">
+          <label for="" class="form__label">Cadence</label>
+          <input
+            class="form__input form__input--cadence"
+            type="text"
+            placeholder="step/min"
+          />
+        </div>
+        <div class="form__row form__row--hidden">
+          <label for="" class="form__label">Elev Gain</label>
+          <input
+            class="form__input form__input--elevation"
+            type="text"
+            placeholder="meter"
+          />
+        </div>
+        <button class="form__btn">OK</button>
+      </form>
+      <p class="copiright">
+        &copy; Copyright by
+        <a
+          class="twitter-link"
+          targey="_blank"
+          href="https://twitter.com/jonasschmedtman"
+          >Jonas Schmedtmann</a
+        >
+        .Use for my portfolio
+      </p>
+    </div>
+    <div id="map"></div>
+  </body>
+</html>
